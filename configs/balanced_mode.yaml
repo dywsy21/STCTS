@@ -1,0 +1,53 @@
+# Balanced mode - Best WER/NISQA/bitrate tradeoff
+
+audio:
+  sample_rate: 16000
+  chunk_size: 1024
+  channels: 1
+
+stt:
+  model: "faster-whisper"
+  model_size: "small"  # Smaller model for better speed-accuracy balance
+  chunk_duration_ms: 400
+  vad_threshold: 0.5
+  language: null
+
+prosody:
+  update_rate_hz: 0.5  # Every 2 seconds - moderate
+  features:
+    - pitch
+    - energy
+    - speaking_rate
+  emotion_rate_hz: 0.2  # Every 5 seconds
+
+speaker:
+  embedding_model: "speechbrain/spkrec-ecapa-voxceleb"
+  embedding_dim: 192
+  update_on_change: true
+  change_threshold: 0.3
+
+compression:
+  text_algorithm: "brotli"
+  text_level: 5
+  text_preprocess: true
+  prosody_quantization_pitch_bits: 6
+  prosody_quantization_energy_bits: 5 
+  prosody_quantization_rate_bits: 5
+  prosody_delta_encoding: true
+  timbre_algorithm: "float16"
+
+tts:
+  model: "xtts-v2"
+  streaming: true
+  vocoder: "hifigan"
+
+network:
+  protocol: "webrtc"
+  fec_enabled: true
+  priority_queue: true
+  max_bandwidth_bps: 650  # Target ~600-700 bps
+
+quality:
+  target_latency_ms: 500
+  graceful_degradation: true
+  interpolate_missing_prosody: true

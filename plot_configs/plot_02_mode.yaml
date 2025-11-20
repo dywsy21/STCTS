@@ -1,0 +1,56 @@
+# Generated from high_quality_mode.yaml for plot_02_mode.yaml
+# Prosody rate: 0.08Hz
+
+# High quality mode - Best WER with good NISQA balance
+
+audio:
+  sample_rate: 16000
+  chunk_size: 1024
+  channels: 1
+
+stt:
+  model: "faster-whisper"
+  model_size: "distil-large-v3"  # Best transcription accuracy
+  chunk_duration_ms: 300
+  vad_threshold: 0.4
+  language: null
+
+prosody:
+  update_rate_hz: 0.08  # Every second - frequent updates
+  features:
+    - pitch
+    - energy
+    - speaking_rate
+  emotion_rate_hz: 0.05  # Every 2 seconds
+
+speaker:
+  embedding_model: "speechbrain/spkrec-ecapa-voxceleb"
+  embedding_dim: 192 # 256
+  update_on_change: true
+  change_threshold: 0.25
+
+compression:
+  text_algorithm: "brotli"
+  text_level: 5
+  text_preprocess: false  # No preprocessing for best accuracy
+  prosody_quantization_pitch_bits: 8  # High precision
+  prosody_quantization_energy_bits: 6
+  prosody_quantization_rate_bits: 6
+  prosody_delta_encoding: true
+  timbre_algorithm: "float32"  # Full precision
+
+tts:
+  model: "xtts-v2"
+  streaming: true
+  vocoder: "hifigan"
+
+network:
+  protocol: "webrtc"
+  fec_enabled: true
+  priority_queue: true
+  max_bandwidth_bps: 900  # Target <1000 bps
+
+quality:
+  target_latency_ms: 400
+  graceful_degradation: true
+  interpolate_missing_prosody: true

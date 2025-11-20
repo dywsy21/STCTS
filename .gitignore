@@ -1,0 +1,128 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Poetry
+poetry.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Models and data (large files)
+models/
+datasets/
+data/
+*.pth
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+
+# Logs
+logs/
+*.log
+
+# Results and outputs
+results/
+outputs/
+experiments/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Audio files
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.opus
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/.nuxt/
+frontend/.cache/
+frontend/coverage/
+frontend/*.log
+frontend/.env.local
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Benchmarks
+benchmarks/cache/
+benchmarks/downloads/
+benchmarks/.cache/
+
+# Specific to project
+timbre_profiles/
+call_recordings/
+
+wav2vec2_checkpoints/
+test_audios/
+
+**/*.aux
+**/*.synctex
+**/*.synctex.gz
+**/*.dvi
+**/*.out
+paper/paper.pdf
+
+LibriSpeech/
+paper/paper.synctex(busy)
+patent
+plan_draft.md
+refs/
+json_results/

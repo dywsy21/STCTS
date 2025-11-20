@@ -1,0 +1,101 @@
+# STT-Compression-TTS Requirements
+# Python 3.10+
+# Generated from pyproject.toml for pip compatibility
+
+# Core Dependencies
+# =================
+
+# Audio Processing
+pyaudio==0.2.14
+soundfile==0.13.1
+librosa==0.11.0
+resampy==0.4.2
+pydub==0.25.1
+
+# Speech-to-Text (STT)
+faster-whisper>=1.0.0
+vosk==0.3.45
+webrtcvad==2.0.10
+
+# Text-to-Speech (TTS)
+TTS==0.22.0  # Coqui TTS with XTTS-v2
+piper-tts>=1.2.0  # Optional: Uncomment for Piper TTS support
+
+# Prosody and Speaker Features
+praat-parselmouth==0.4.3
+speechbrain==1.0.2
+
+# ML Frameworks
+# torch==2.1.2
+# torchaudio==2.1.2
+# transformers>=4.36.2
+
+torch
+TorchCodec
+torchaudio
+transformers==4.33.3
+
+# Compression
+brotli>=1.1.0
+lz4>=4.3.2
+
+# Networking
+aiortc>=1.6.0
+aiohttp>=3.9.1
+websockets>=12.0
+python-socketio>=5.10.0
+
+# Backend Server
+fastapi>=0.105.0
+uvicorn[standard]>=0.25.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Utilities
+numpy
+scipy>=1.15.0
+pandas
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+click>=8.1.7
+tqdm>=4.66.1
+loguru>=0.7.2
+
+# Cryptography
+cryptography>=41.0.7
+
+# Audio Quality Metrics
+pesq==0.0.4
+pystoi==0.4.0
+nisqa @ git+https://forgejo.dywsy21.cn:18080/dywsy21/nisqa2.0
+# Note: UTMOS and NISQA require separate installation from their repos
+
+# Baseline Codecs
+opuslib>=3.0.0  # Python bindings for Opus codec
+encodec>=0.1.1  # Meta's neural audio codec
+
+# Development Dependencies (optional)
+# ====================================
+# Uncomment below for development environment
+
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+hypothesis>=6.92.1
+black>=23.12.1
+isort>=5.13.2
+flake8>=6.1.0
+mypy>=1.7.1
+pre-commit>=3.6.0
+
+# Benchmarking Dependencies (optional)
+# =====================================
+# Uncomment below for benchmarking
+
+matplotlib>=3.8.2
+seaborn>=0.13.0
+plotly>=5.18.0
+jiwer>=3.0.3
+jupyter>=1.0.0
+
+aioconsole
