@@ -1,0 +1,47 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright (C) 2025 STT-Compression-TTS Contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+================================================================================
+
+ADDITIONAL TERMS (under AGPL-3.0 Section 7):
+
+1. COMMERCIAL USE PROHIBITION:
+   This software is licensed EXCLUSIVELY for non-commercial use. Any commercial
+   use, including but not limited to:
+   - Selling the software or services based on it
+   - Using it in commercial products or services
+   - Deploying it for revenue-generating activities
+   
+   is STRICTLY PROHIBITED without explicit written permission from the copyright
+   holders.
+
+2. MANDATORY SOURCE CODE DISCLOSURE:
+   Any modifications, derivative works, or services that use this software
+   (including network use) MUST make their complete source code publicly
+   available under the same AGPL-3.0 license with these additional terms.
+
+3. ATTRIBUTION REQUIREMENT:
+   All derivative works must clearly attribute the original STT-Compression-TTS
+   project and maintain all copyright notices.
+
+For commercial licensing inquiries, please contact the project maintainers.
+
+================================================================================
+
+Full AGPL-3.0 License Text:
+https://www.gnu.org/licenses/agpl-3.0.txt

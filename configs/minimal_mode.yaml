@@ -1,0 +1,51 @@
+# Minimal mode - Maximize NISQA-per-bit
+
+audio:
+  sample_rate: 16000
+  chunk_size: 1024
+  channels: 1
+
+stt:
+  model: "faster-whisper"
+  model_size: "small"  # Small model for acceptable WER
+  chunk_duration_ms: 500
+  vad_threshold: 0.6
+  language: "en"
+
+prosody:
+  update_rate_hz: 0.1  # Every 10 seconds - very sparse
+  features:
+    - pitch
+  emotion_rate_hz: 0.0  # Disabled
+
+speaker:
+  embedding_model: "speechbrain/spkrec-ecapa-voxceleb"
+  embedding_dim: 192
+  update_on_change: true
+  change_threshold: 0.4
+
+compression:
+  text_algorithm: "brotli"
+  text_level: 9
+  text_preprocess: true
+  prosody_quantization_pitch_bits: 3  # Minimal but usable
+  prosody_quantization_energy_bits: 2
+  prosody_quantization_rate_bits: 0
+  prosody_delta_encoding: true
+  timbre_algorithm: "float16"
+
+tts:
+  model: "xtts-v2"
+  streaming: true
+  vocoder: "hifigan"
+
+network:
+  protocol: "webrtc"
+  fec_enabled: false
+  priority_queue: true
+  max_bandwidth_bps: 450  # Target ~450-500 bps
+
+quality:
+  target_latency_ms: 600
+  graceful_degradation: true
+  interpolate_missing_prosody: true
